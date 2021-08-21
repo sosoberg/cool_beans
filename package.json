@@ -1,0 +1,27 @@
+{
+  "name": "cool_beans",
+  "version": "1.0.0",
+  "description": "cool beans",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sosoberg/cool_beans.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sosoberg/cool_beans/issues"
+  },
+  "homepage": "https://github.com/sosoberg/cool_beans#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.1.2",
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^5.13.7"
+  }
+}
