@@ -6,12 +6,25 @@ type User{
     email: String!
     password: String!
 }
+
 type Product{
     id: ID!
     title: String!
     ingredients: String!
     allergens: String!
     size: String
+}
+
+type Auth{
+    user: User
+    token: ID!
+}
+
+type Query{
+    login(email: String!, password: String!):Auth
+
+}
+type Mutation{
 
 }
 

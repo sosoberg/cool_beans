@@ -7,18 +7,22 @@ const productSchema = new mongoose.Schema({
         primaryKey: true,
         autoIncrement: true,
     },
+
     title: {
         type: String,
         allowNull: false,
     },
+
     ingredients: {
         type: String,
         allowNull: false,
     },
+
     allergens: {
         type: String,
         allowNull: false,
     },
+    
     size: {
         type: String
     }
