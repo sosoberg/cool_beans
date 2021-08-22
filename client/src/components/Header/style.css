@@ -1,0 +1,28 @@
+nav {
+    display: grid;
+    grid-template-columns: 1fr 15fr 5fr;
+    font-size: 22px;
+    align-items: center;
+}
+
+nav h1 {
+    margin: 10px;
+}
+
+.signUpNav {
+    text-align: end;
+    margin: 30px;
+}
+
+.signUp {
+    background-color: orangered;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}

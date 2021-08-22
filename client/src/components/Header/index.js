@@ -21,12 +21,17 @@ const Header = () => {
 
     return (
         <header>
-            <h1>Cool_Beans</h1>
+            
             <nav>
+                <h1>Kool_Beans</h1>
                 <div>
-                    <Link to='/'>Home</Link>
-                    <Link to='/products'>Products</Link>
-                    <Link to='/contact'>Contact</Link>
+                    <Link className='link' to='/'>Home</Link>
+                    <Link className='link' to='/products'>Menu</Link>
+                    <Link className='link' to='/contact'>Contact</Link>
+                </div>
+                <div className='signUpNav'>
+                    <Link className='link' to='/login'>Log In</Link>
+                    <Link className='signUp link' to='/signup'>Join</Link>
                 </div>
                 <div className='drawer'>
                     <Drawers open={state} handleClose={handleDrawerClose} />
@@ -37,7 +42,7 @@ const Header = () => {
                         >
                         <MenuIcon style={{ color: "white" }} />
                         </IconButton>
-            </div>
+                </div>
             </nav>
         </header>
     );
