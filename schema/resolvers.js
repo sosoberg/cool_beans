@@ -1,19 +1,24 @@
-const db = require("../config/connection")
+const db = require("../models")
 const{jwtSign} = require("../utils/auth.js")
+const {ApolloError} = require("apollo-server-express")
 module.exports = {
-    Queries: {
-        method: async function(parent, args, context){
+    Query: {
+        // method: async function(parent, args, context){
 
-        }
+        // }
         
     },
-    Mutations: {
+    Mutation: {
         login: async function(parent, args, context){
             try{
                 let user = await db.User.findOne({
                     email: args.email
-                }).select("-password")
-                let token = await jwtSign(user)
+                })
+        
+                let token = await jwtSign(args, user)
+                if(!token){
+                    throw new ApolloError('Invalid Login Credentials')
+                }
                 return {user, token}
             }catch(err){
                 throw new Error(err.message)
@@ -23,11 +28,14 @@ module.exports = {
         },
         createUser: async function(parent, args, context){
             try{
-                let user = await db.User.create(args).select("-password")
-                let token = await jwtSign(user)
+                let user = await db.User.create(args)
+                let token = await jwtSign(args, user)
+                if(!token){
+                    throw new ApolloError('Invalid Login Credentials')
+                }
                 return {user, token}
             }catch(err){
-                throw new Error(err.message)
+                throw new ApolloError(err.message)
             }
 
         },

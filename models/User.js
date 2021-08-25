@@ -28,6 +28,8 @@ const userSchema = new mongoose.Schema({
 
 userSchema.methods = {
     checkPassword: function (inputPassword) {
+        console.log(this.password)
+        console.log(inputPassword)
         return bcrypt.compareSync(inputPassword, this.password)
     },
 
