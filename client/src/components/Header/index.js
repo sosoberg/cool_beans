@@ -23,7 +23,8 @@ const Header = () => {
         <header>
             
             <nav>
-                <h1>Kool_Beans</h1>
+                <div className='beanLogo'>
+                </div>
                 <div>
                     <Link className='link' to='/'>Home</Link>
                     <Link className='link' to='/products'>Menu</Link>

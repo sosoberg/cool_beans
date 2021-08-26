@@ -9,6 +9,16 @@ nav h1 {
     margin: 10px;
 }
 
+.beanLogo {
+    background-image: url('../../assets/coffeebean.jpg');
+    width: 100px;
+    height: 50px;
+    /* background-position: 10px 10px; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+
 .signUpNav {
     text-align: end;
     margin: 30px;
