@@ -1,0 +1,39 @@
+.homeImageGridOne {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.cropped {
+    height: 350px; 
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.cropped img {
+    width: 45vw;
+}
+
+.contactImage {
+    position: relative;
+    top: -150px;
+}
+
+.cropped2 {
+    height: 400px; 
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    margin: 100px 40px 100px 40px;
+}
+
+.cropped2 img {
+    position: relative;
+    width: 94.75vw;
+    margin-left: auto;
+    margin-right: auto;
+    top: -150px;
+}
+
