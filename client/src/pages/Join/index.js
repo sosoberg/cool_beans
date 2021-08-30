@@ -29,6 +29,12 @@ const [createUser, {data, loading, error}] = useMutation(CREATE_USER)
 
   if (loading) return 'Submitting...';
   if (error) return `Submission error! ${error.message}`;
+  if(data){
+    console.log("data triggard")
+    localStorage.setItem("token", data.login.token)
+    return <Redirect push to="/"/>
+
+}
 
   return (
     <div id="joinContain">

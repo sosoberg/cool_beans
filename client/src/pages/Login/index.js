@@ -4,6 +4,8 @@ import { useMutation } from '@apollo/client';
 import {LOGIN} from "../../graphQL/mutations"
 import {setUserName} from "../../redux/userReducers"
 import {useDispatch, useReducer} from "react-redux"
+import {Redirect} from 'react-router-dom';
+
 
 
 
@@ -34,6 +36,7 @@ const [loginUser, {data, loading, error}] = useMutation(LOGIN)
   if(data){
       console.log("data triggard")
       localStorage.setItem("token", data.login.token)
+      return <Redirect push to="/"/>
 
   }
 
