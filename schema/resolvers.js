@@ -21,7 +21,7 @@ module.exports = {
                 }
                 return {user, token}
             }catch(err){
-                throw new Error(err.message)
+                throw new ApolloError(err.message)
             }
             
 

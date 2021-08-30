@@ -1,7 +1,7 @@
 nav {
     display: grid;
     grid-template-columns: 1fr 15fr 5fr;
-    font-size: 22px;
+    font-size: 20px;
     align-items: center;
 }
 
@@ -13,7 +13,6 @@ nav h1 {
     background-image: url('../../assets/coffeebean.jpg');
     width: 100px;
     height: 50px;
-    /* background-position: 10px 10px; */
     background-size: 100%;
     background-repeat: no-repeat;
     margin-right: 20px;
