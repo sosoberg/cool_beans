@@ -32,17 +32,21 @@ const [createUser, {data, loading, error}] = useMutation(CREATE_USER)
 
   return (
     <div id="joinContain">
+      <div className='supCrop'>
+        <img className='supportImage' src='../assets/images/support.jpg' alt='support our business'/>
+      </div>
       <form onSubmit={handleSubmit} id="joinForm">
+        <h2>Join Us!</h2>
         <div>
-          <input onChange={handleChange} placeholder="username" name="username" value={join.username}></input>
+          <input className="signUpForm" onChange={handleChange} placeholder="username" name="username" value={join.username}></input>
         </div>
         <div>
-          <input onChange={handleChange} placeholder="email" name="email" value={join.email}></input>
+          <input className="signUpForm" onChange={handleChange} placeholder="email" name="email" value={join.email}></input>
         </div>
         <div>
-          <input onChange={handleChange} placeholder="password" name="password" value={join.password}></input>
+          <input className="signUpForm" onChange={handleChange} placeholder="password" name="password" value={join.password}></input>
         </div>
-        <button>Submit</button>
+        <button className='joinSubmit'>Submit</button>
       </form>
     </div>
   );

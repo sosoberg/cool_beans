@@ -1,8 +1,28 @@
+@keyframes display {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+
+.display {
+    animation: display;
+    animation-duration: .7s;
+}
+
+.loader {
+    position: relative;
+    text-align: center;
+    top: 200px;
+}
+
 .homeImageGridOne {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
 
 .cropped {
     height: 350px; 

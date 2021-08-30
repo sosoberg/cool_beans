@@ -1,0 +1,14 @@
+@keyframes display {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+
+.display {
+    animation: display;
+    animation-duration: .7s;
+}
