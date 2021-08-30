@@ -1,0 +1,33 @@
+@keyframes display {
+    from {
+      opacity: 0;
+    }
+    95% {
+        opacity: 0;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+.display {
+    animation: display;
+    animation-duration: .7s;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+    position: fixed;
+    top: 80px;
+  }
+
+  .markerDiv {
+    margin: none;
+    border: none;
+    padding: solid 1px black;
+    font-size: 25px;
+    font-weight: bolder;
+  }

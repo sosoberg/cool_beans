@@ -16,6 +16,7 @@ import Products from './pages/Products'
 import Contact from './pages/Contact'
 import Join from "./pages/Join"
 import Login from "./pages/Login"
+import Map from "./pages/Map"
 
 // redux configure
 import configureStore from "./redux/configureStore"
@@ -61,6 +62,7 @@ function App() {
                     <Route exact path='/contact' component={ Contact } />
                     <Route exact path='/signup' component={ Join } />
                     <Route exact path='/login' component={ Login } />
+                    <Route exact path='/map' component={ Map } />
                 </Switch>
                 <Footer />
         </Router>
