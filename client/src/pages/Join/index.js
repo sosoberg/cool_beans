@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import "./style.css"
 import { useMutation } from '@apollo/client';
-import {CREATE_USER} from "../../graphQL/mutations"
+import {CREATE_USER} from "../../graphQL/api/mutations"
+import {Redirect} from "react-router-dom"
 
 
 
