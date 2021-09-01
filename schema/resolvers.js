@@ -1,11 +1,19 @@
 const db = require("../models")
-const{jwtSign} = require("../utils/auth.js")
+const{jwtSign, verify} = require("../utils/auth.js")
 const {ApolloError} = require("apollo-server-express")
 module.exports = {
     Query: {
-        // method: async function(parent, args, context){
+        me: async function(parent, args, context){
+            console.log(context.user)
+            if(context.user){
+                let user = await db.User.findById(context.user.userId).select("-password")
+                return user
+            }else{
+                throw new ApolloError('You are not authorized sir')
+            }
+            
 
-        // }
+        },
         
     },
     Mutation: {
