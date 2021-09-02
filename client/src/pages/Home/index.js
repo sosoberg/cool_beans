@@ -1,11 +1,12 @@
 import React from "react";
-
 import './style.css'
-
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
-
-function Home(props) {
+import {useApolloClient} from "@apollo/client";
+import {Link} from "react-router-dom"
+function Home() {
+ 
+  
  
 
   return (
@@ -22,23 +23,21 @@ function Home(props) {
       </div>
 
       <div className='display'>
-        <div>
-            <p>Home</p>
-        </div>
         <div className='homeImageGridOne'>
-          <div className='cropped'>
+          <Link className='cropped'>
             <p className='pictureTitle'>Menu</p>
             <img src='../assets/images/coffeeImage.jpg' alt='pouring coffee'/>
-          </div>
-          <div className='cropped'>
+          </Link>
+          <Link className='cropped'>
             <p className='pictureTitle'>Contact</p>
             <img className='contactImage' src='../assets/images/contactImage.jpg' alt='contact'/>
-          </div>
+          </Link>
         </div>
+        <Link>
         <div className='cropped2'>
             <p className='pictureTitle2'>Explore</p>
-            <img src='../assets/images/matterhorn.jpg' alt='matterhorn'/>
         </div>
+        </Link>
       </div>
     </>
   );
