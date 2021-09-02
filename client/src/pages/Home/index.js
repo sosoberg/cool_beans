@@ -24,16 +24,16 @@ function Home() {
 
       <div className='display'>
         <div className='homeImageGridOne'>
-          <Link className='cropped'>
+          <Link to="/products" className='cropped'>
             <p className='pictureTitle'>Menu</p>
             <img src='../assets/images/coffeeImage.jpg' alt='pouring coffee'/>
           </Link>
-          <Link className='cropped'>
+          <Link to="/contact" className='cropped'>
             <p className='pictureTitle'>Contact</p>
             <img className='contactImage' src='../assets/images/contactImage.jpg' alt='contact'/>
           </Link>
         </div>
-        <Link>
+        <Link to="/map">
         <div className='cropped2'>
             <p className='pictureTitle2'>Explore</p>
         </div>

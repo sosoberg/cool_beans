@@ -8,6 +8,7 @@ import Drawers from "../Drawer";
 import { useSelector, useDispatch } from "react-redux";
 import {CURRENT_USER} from "../../graphQL/api/querys"
 import {useLazyQuery} from "@apollo/client"
+import { Hidden } from '@material-ui/core';
 const Header = () => {
 //  setting up dispatch
     const dispatch = useDispatch()
@@ -48,7 +49,8 @@ if(data){
     <header>
       <nav>
         <div className="beanLogo"></div>
-        <div>
+        <Hidden smDown>
+        <div className="linksContain">
           <Link className="link" to="/">
             Home
           </Link>
@@ -70,31 +72,41 @@ if(data){
             <></>
           )}
         </div>
+        </Hidden>
+        <Hidden smDown>
         <div className="signUpNav">
         {/* If loggedIn then dont desplay */}
           {!loggedIn ? (
             <>
+            
               <Link className="link" to="/login">
                 Log In
               </Link>
+              
+              
               <Link className="signUp link" to="/signup">
                 Join
               </Link>
+              
             </>
           ) : (
             <></>
           )}
         </div>
+        </Hidden>
+        <Hidden mdUp>
         <div className="drawer">
+
           <Drawers open={state} handleClose={handleDrawerClose} />
           <IconButton
             aria-controls="simple-menu"
             aria-haspopup="true"
             onClick={handleOpen}
           >
-            <MenuIcon style={{ color: "white" }} />
+            <MenuIcon style={{ color: "black" }} />
           </IconButton>
         </div>
+        </Hidden>
       </nav>
     </header>
   );
