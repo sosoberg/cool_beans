@@ -1,4 +1,5 @@
 import React from "react";
+import coffeeGrinder from "../../assets/coffeeGrinder.jpg"
 
 import './style.css'
 
@@ -20,6 +21,9 @@ function Contact() {
       </div>
       <div className='display'>
         <div className="contactBanner">
+          <img src={coffeeGrinder}></img>
+          <h1>Contact</h1>
+          <img src={coffeeGrinder}></img>
             
         </div>
       </div>

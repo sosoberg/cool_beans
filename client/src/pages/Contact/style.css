@@ -16,4 +16,15 @@
   width: 100vw;
   height: 20vh;
   background-color: black;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  
+}
+.contactBanner img{
+  height: 100%;
+}
+.contactBanner h1{
+  font-size: 24px;
 }
