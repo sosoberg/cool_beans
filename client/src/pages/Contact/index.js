@@ -26,6 +26,9 @@ function Contact() {
           <img src={coffeeGrinder}></img>
             
         </div>
+        <div id="contactContain">
+
+        </div>
       </div>
     </>
     

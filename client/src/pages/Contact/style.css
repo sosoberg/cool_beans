@@ -9,13 +9,15 @@
   }
 
 .display {
-    animation: display;
-    animation-duration: .7s;
+    
+    height: 100vh;
+    background-image: url("../../assets/whitewood.jpg");
+
 }
 .contactBanner{
   width: 100vw;
   height: 20vh;
-  background-color: black;
+  /* background-color: black; */
   display: flex;
   color: white;
   justify-content: center;
