@@ -1,26 +1,24 @@
 import React, { useState } from "react";
 import "./style.css";
 import { useMutation, gql } from "@apollo/client";
-// import { LOGIN } from "../../graphQL/mutations";
 import { LOGIN } from "../../graphQL/api/mutations";
-import { CURRENT_USER } from "../../graphQL/api/querys";
-import { setUserName } from "../../redux/userReducers";
-import { useDispatch, useReducer } from "react-redux";
+import { setLoginState} from "../../redux/userReducers";
+import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-import { ApolloConsumer, useApolloClient, useLazyQuery } from "@apollo/client";
-const myNewTodo = {
-  username: 'Start using Apollo Client.',
-  __typename: 'User',
-};
+
+
 export default function Login() {
-  const client = useApolloClient();
-  const [loginUser, loggedIn] = useMutation(LOGIN);
-  const [getCurrentUser, {loading, error, data }] = useLazyQuery(CURRENT_USER)
+  // setting dispatch
+  const dispatch = useDispatch()
+  // creating loginUser function and its responses
+  const [loginUser, {data, loading, error}] = useMutation(LOGIN);
+  //local state for logging in.
   const [login, setLogin] = useState({
     email: "",
     password: "",
   });
 
+//function for handling change
   const handleChange = (event) => {
     let name = event.target.name;
     let value = event.target.value;
@@ -29,24 +27,25 @@ export default function Login() {
       [name]: value,
     });
   };
+  //function for handleing form submit
   const handleSubmit = async (event) => {
     event.preventDefault();
     await loginUser({ variables: login });
-    getCurrentUser()
     
   };
 
-  if (loggedIn.loading) return "Submitting...";
-  if (loggedIn.error) return `Submission error! ${loggedIn.error.message}`;
-  if (loggedIn.data) {
-    console.log("data triggard");
-    localStorage.setItem("token", loggedIn.data.login.token);
-    console.log(loggedIn);
-    
+  if (loading) return "Submitting...";
+  if (error) return `Submission error! ${error.message}`;
+  if (data) {
+    localStorage.setItem("token", data.login.token);
+    // If data then set state as logged in and redirect
+    dispatch(setLoginState({
+      userName: data.login.user.username,
+      loggedIn: true
+    }))
     return <Redirect push to="/"/>
-    
   }
-  
+
  
 
   return (

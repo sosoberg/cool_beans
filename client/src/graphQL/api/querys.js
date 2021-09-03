@@ -8,4 +8,5 @@ query me{
     }
 }
 `
+
 export {CURRENT_USER}
