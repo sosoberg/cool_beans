@@ -5,6 +5,7 @@ import { LOGIN } from "../../graphQL/api/mutations";
 import { setLoginState} from "../../redux/userReducers";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
+import bean from "./Da-Bean.png"
 
 
 export default function Login() {
@@ -49,26 +50,36 @@ export default function Login() {
  
 
   return (
-    <div>
+    <div style={{width: "100vw", height: "100vh", position: "relative"}}>
+    <div id="loginFormContain">
       <form onSubmit={handleSubmit} id="joinForm">
-        <div>
+        <h2 style={{textAlign: "center"}}>Bro!</h2>
+        <div className="flexCenter">
           <input
+          className="loginInput"
             onChange={handleChange}
             placeholder="email"
             name="email"
             value={login.email}
           ></input>
         </div>
-        <div>
+        <div className="flexCenter">
           <input
+          className="loginInput"
             onChange={handleChange}
             placeholder="password"
             name="password"
             value={login.password}
           ></input>
         </div>
-        <button>Submit</button>
+        <div id="loginButtonContain">
+          
+          
+          <button  id="loginButton"  style={{backgroundImage:`url(${bean})`}}>Login</button>
+        
+        </div>
       </form>
+    </div>
     </div>
   );
 }
