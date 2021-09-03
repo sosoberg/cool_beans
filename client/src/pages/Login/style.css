@@ -1,0 +1,39 @@
+#loginFormContain{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    border-radius: 30px;
+    background-color: antiquewhite;
+}
+.flexCenter{
+    display: flex;
+    justify-content: center;
+}
+.flexCenter input{
+
+
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: black solid 2px;
+    border-radius: 8px;
+    padding: 5px;
+    width: 80%;
+}
+#loginButtonContain{
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+#loginButtonContain div{
+   height: 40px;
+   width: 60px;
+}
+#loginButton{
+    border:none; 
+    background-image: url("./Da-Bean.png");
+}

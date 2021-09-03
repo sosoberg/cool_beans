@@ -49,9 +49,11 @@ export default function Login() {
  
 
   return (
-    <div>
+    <div style={{width: "100vw", height: "100vh", position: "relative"}}>
+    <div id="loginFormContain">
       <form onSubmit={handleSubmit} id="joinForm">
-        <div>
+        <h2 style={{textAlign: "center"}}>Bro!</h2>
+        <div className="flexCenter">
           <input
             onChange={handleChange}
             placeholder="email"
@@ -59,7 +61,7 @@ export default function Login() {
             value={login.email}
           ></input>
         </div>
-        <div>
+        <div className="flexCenter">
           <input
             onChange={handleChange}
             placeholder="password"
@@ -67,8 +69,12 @@ export default function Login() {
             value={login.password}
           ></input>
         </div>
-        <button>Submit</button>
+        <div id="loginButtonContain">
+          
+        <div id="loginButton">Submit</div>
+        </div>
       </form>
+    </div>
     </div>
   );
 }
