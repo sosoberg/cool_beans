@@ -12,3 +12,8 @@
     animation: display;
     animation-duration: .7s;
 }
+.contactBanner{
+  width: 100vw;
+  height: 20vh;
+  background-color: black;
+}

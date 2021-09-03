@@ -19,8 +19,8 @@ function Contact() {
         />
       </div>
       <div className='display'>
-        <div>
-            <p>Contact</p>
+        <div className="contactBanner">
+            
         </div>
       </div>
     </>
