@@ -8,25 +8,82 @@
     }
   }
 
-.display {
+.contactdisplay {
     
-    height: 100vh;
-    background-image: url("../../assets/whitewood.jpg");
-
+    height: 88vh;
+    /* background-image: url("../../assets/whitewood.jpg"); */
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.11) 10%,
+      #d1d0d0
+    ),url("../../assets/whitewood.jpg");
 }
 .contactBanner{
-  width: 100vw;
-  height: 20vh;
-  /* background-color: black; */
-  display: flex;
-  color: white;
-  justify-content: center;
+  width: 80%;
   align-items: center;
-  
-}
-.contactBanner img{
-  height: 100%;
+  background-color: rgba(205, 205, 205, .8);
+  border-radius: 10px;
+  margin-top: 15px;
+  text-align: center;
 }
 .contactBanner h1{
-  font-size: 24px;
+  font-size: 35px;
+  margin: 20px 
+ }
+.contactBanner p{
+  font-size: 20px;
+ margin: 20px 20% 20px 20%
 }
+/* #E9E9E9
+#CDCDCD
+#E9E7DA */
+/* #F2EEE2 */
+#bannerContain{
+  display: flex;
+  justify-content: center;
+}
+#infoWraper{
+  display: flex;
+  justify-content: center;
+}
+#infoContain{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.infoBlocks{
+  width: 48%;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+#hoursOfOp{
+  background-color: rgba(242, 238, 226,.8) ;
+}
+#contactInfo{
+  background-color: rgba(233, 231, 218,.8) ;
+}
+th h2{
+  font-size: 20px;
+}
+
+table{
+  width:100%;
+  margin-top: 20px;
+}
+
+address > * {
+  margin-top: 5px;
+
+}
+
+@media only screen and (max-width: 700px){
+  .infoBlocks{
+    width: 100%;
+  }
+  
+}
+

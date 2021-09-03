@@ -49,13 +49,13 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <div>
+    <div >
       <ApolloProvider client={client}>
         <Provider store={store}>
       <Router>
-            <div className>
+            
                 <Header />
-            </div>
+            
                 <Switch>
                     <Route exact path='/' component={ Home } />
                     <Route exact path='/products' component={ Products } />

@@ -46,7 +46,7 @@ if(data){
 }
 
   return (
-    <header>
+    
       <nav>
         <div className="beanLogo"></div>
         <Hidden smDown>
@@ -108,7 +108,7 @@ if(data){
         </div>
         </Hidden>
       </nav>
-    </header>
+    
   );
 };
 
