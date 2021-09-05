@@ -10,7 +10,7 @@ function Contact() {
     <>
       <div className='loader'>
         <Loader
-          type="Bars"
+          type="Oval"
           color="black"
           secondaryColor="black"
           height={300}

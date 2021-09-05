@@ -11,19 +11,16 @@ function Home(props) {
     <>
       <div className='loader'>
         <Loader
-          type="Bars"
+          type="Oval"
           color="black"
           secondaryColor="black"
           height={300}
           width={600}
-          timeout={700} //3 secs
+          timeout={650} //3 secs
         />
       </div>
 
       <div className='display'>
-        <div>
-            <p>Home</p>
-        </div>
         <div className='homeImageGridOne'>
           <div className='cropped'>
             <p className='pictureTitle'>Menu</p>
