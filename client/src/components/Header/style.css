@@ -1,9 +1,17 @@
+
+
 nav {
     display: grid;
-    grid-template-columns: 1fr 15fr 5fr;
+    grid-template-columns: repeat(12, 1fr);
     font-size: 20px;
     align-items: center;
+    background-color: rgba(244, 244, 244,1);
+    position: sticky;
+    top:0;
+    z-index: 3;
 }
+
+
 
 nav h1 {
     margin: 10px;
@@ -16,11 +24,11 @@ nav h1 {
     background-size: 100%;
     background-repeat: no-repeat;
     margin-right: 20px;
+    grid-column: 1;
 }
 
-.signUpNav {
-    text-align: end;
-    margin: 30px;
+.linksContain{
+    grid-column: 2/8;
 }
 
 .signUp {
@@ -34,4 +42,13 @@ nav h1 {
     text-decoration: none;
     color: black;
     margin: 10px;
+}
+.drawer{
+    grid-column: 11;
+}
+.signUpNav{
+    grid-column: 11/13;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

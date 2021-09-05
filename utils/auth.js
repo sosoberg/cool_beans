@@ -22,32 +22,23 @@ module.exports = {
       return false
     }
   },
-  verify: async function (req) {
-    let token;
-    try {
-      if (!req.headers) {
-        token = false;
-      } else if (!req.headers.authorization) {
-        token = false;
-      } else {
-        token = req.headers.authorization.split(" ")[1];
-      }
-      if (!token) {
-        throw new Error("Please Login to continue");
-      }
-      let match = await jwt.verify(token, JSON_SEOL, function (err, tokenData) {
-        if (err) {
-          throw new Error(err.message);
-        } else {
-          return tokenData;
-        }
-      });
-      if (!match) {
-        throw new Error("Session Expired");
-      }
-      return match;
-    } catch (err) {
-      return err.message;
+  verify: function({req}){
+    let token = req.body.token || req.query.token || req.headers.authorization;
+
+    if(req.headers.authorization){
+        token = token.split(" ")[1]
     }
-  },
+
+    if(!token){
+        return req
+    }
+
+    try{
+        const data = jwt.verify(token, process.env.JSON_SEOL, {maxAge: "1hr"});
+        req.user = data
+    }catch{
+        console.log('Invalid token')
+    }
+    return req
+}
 };

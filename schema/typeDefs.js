@@ -21,8 +21,8 @@ type Auth{
 }
 
 type Query{
-    login(email: String!, password: String!):Auth
-    createUser(username: String!, email: String!, password: String!):Auth
+    me:User
+   
 
 }
 type Mutation{

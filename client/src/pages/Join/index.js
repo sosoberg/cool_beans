@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import "./style.css"
 import { useMutation } from '@apollo/client';
-import {CREATE_USER} from "../../graphQL/mutations"
+import {CREATE_USER} from "../../graphQL/api/mutations"
+import {Redirect} from "react-router-dom"
 
 
 
@@ -29,6 +30,12 @@ const [createUser, {data, loading, error}] = useMutation(CREATE_USER)
 
   if (loading) return 'Submitting...';
   if (error) return `Submission error! ${error.message}`;
+  if(data){
+    console.log("data triggard")
+    localStorage.setItem("token", data.login.token)
+    return <Redirect push to="/"/>
+
+}
 
   return (
     <div id="joinContain">
