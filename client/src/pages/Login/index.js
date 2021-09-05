@@ -8,8 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import bean from "./Da-Bean.png"
 
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from "react-loader-spinner";
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+// import Loader from "react-loader-spinner";
 
 export default function Login() {
   // setting dispatch
@@ -53,7 +53,7 @@ export default function Login() {
  
 
   return (
-    <div style={{width: "100vw", height: "100vh", position: "relative"}}>
+    <div style={{width: "100vw", height: "88vh", position: "relative"}}>
     <div id="loginFormContain">
       <form onSubmit={handleSubmit} id="joinForm">
         <h2 style={{textAlign: "center"}}>Bro!</h2>
@@ -78,7 +78,9 @@ export default function Login() {
         <div id="loginButtonContain">
           
           
-          <button  id="loginButton"  style={{backgroundImage:`url(${bean})`}}>Login</button>
+          <button  id="loginButton"  style={{backgroundImage:`url(${bean})`}}>
+            <span className='loginTxt'>Login</span>
+          </button>
         
         </div>
       </form>
