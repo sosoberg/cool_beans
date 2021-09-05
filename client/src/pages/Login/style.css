@@ -35,6 +35,15 @@
     width: 90px;
     color: white;
     background-size: contain;
-   
-   
+}
+
+.loginTxt {
+    position: relative;
+    display: inline-block;
+    top: 7px;
+    right: -8px;
+    color: rgba(95, 45, 10, 0.6);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+    transform: rotate(-15deg);
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from "react-loader-spinner";
+// import Loader from "react-loader-spinner";
 import {useApolloClient} from "@apollo/client";
 import {Link} from "react-router-dom"
 function Home() {
@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <>
-      <div className='loader'>
+      {/* <div className='loader'>
         <Loader
           type="Oval"
           color="black"
@@ -20,7 +20,7 @@ function Home() {
           width={600}
           timeout={650} //3 secs
         />
-      </div>
+      </div> */}
 
       <div className='display'>
         <div className='homeImageGridOne'>

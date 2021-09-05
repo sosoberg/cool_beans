@@ -2,13 +2,13 @@ import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from "react-loader-spinner";
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+// import Loader from "react-loader-spinner";
 
 function Contact() {
   return (
     <>
-      <div className="loader">
+      {/* <div className="loader">
         <Loader
           type="Oval"
           color="black"
@@ -17,7 +17,7 @@ function Contact() {
           width={600}
           timeout={700} //3 secs
         />
-      </div>
+      </div> */}
       <div className="contactdisplay">
         <div id="contactContain">
           <div id="bannerContain">
