@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import "./style.css";
 import { useMutation, gql } from "@apollo/client";
@@ -7,6 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import bean from "./Da-Bean.png"
 
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 
 export default function Login() {
   // setting dispatch
