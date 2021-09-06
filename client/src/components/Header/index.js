@@ -9,6 +9,8 @@ import { useSelector, useDispatch } from "react-redux";
 import {CURRENT_USER} from "../../graphQL/api/querys"
 import {useLazyQuery} from "@apollo/client"
 import { Hidden } from '@material-ui/core';
+
+
 const Header = () => {
 //  setting up dispatch
     const dispatch = useDispatch()
@@ -90,7 +92,7 @@ if(data){
               
             </>
           ) : (
-            <></>
+            <button className="signup link">Logout</button>
           )}
         </div>
         </Hidden>
