@@ -11,8 +11,6 @@ nav {
     z-index: 3;
 }
 
-
-
 nav h1 {
     margin: 10px;
 }
@@ -43,9 +41,11 @@ nav h1 {
     color: black;
     margin: 10px;
 }
+
 .drawer{
     grid-column: 11;
 }
+
 .signUpNav{
     grid-column: 11/13;
     display: flex;

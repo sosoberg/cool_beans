@@ -59,6 +59,7 @@
   border-radius: 10px;
   margin-top: 20px;
   padding: 10px;
+  border: 1px solid;
 }
 #hoursOfOp{
   background-color: rgba(242, 238, 226,.8) ;

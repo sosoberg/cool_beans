@@ -6,7 +6,37 @@ import './style.css'
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 // import Loader from "react-loader-spinner";
 
-const AnyReactComponent = ({ text, marker }) => <div className="markerDiv">{marker} {text}</div>;
+// import GoogleSearch from '../../components/GoogleSearch';
+
+const KoolBeansMarker = ({ text }) => 
+  <div style={{
+    color: 'white', 
+    background: 'black',
+    padding: '15px 15px',
+    display: 'inline-flex',
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '100%',
+    transform: 'translate(-50%, -50%)'
+  }}>
+    {text}
+  </div>
+
+const MountainMarker = ({ text }) => 
+  <div style={{
+    color: 'black', 
+    background: 'white',
+    padding: '5px 5px',
+    display: 'inline-flex',
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '100%',
+    transform: 'translate(-50%, -50%)'
+  }}>
+    {text}
+  </div>
 
 class Map extends Component {
   static defaultProps = {
@@ -14,12 +44,13 @@ class Map extends Component {
       lat: 46.0207,
       lng: 7.7491
     },
-    zoom: 30
+    zoom: 12
   };
 
   render() {
 
-    const title = 'KoolBeans'
+    const title = 'Kool Beans'
+    const gornergrat = 'Gornergrat'
 
     return (
       // Important! Always set the container height explicitly
@@ -34,6 +65,7 @@ class Map extends Component {
                     timeout={700} //3 secs
                     />
             </div> */}
+          
             <div className='display'>
                 <div id="map">
                     <div style={{ height: '91.5vh', width: '100%' }}>
@@ -42,11 +74,15 @@ class Map extends Component {
                         defaultCenter={this.props.center}
                         defaultZoom={this.props.zoom}
                         >
-                        <AnyReactComponent
+                        <KoolBeansMarker
                             lat={46.0207}
                             lng={7.7491}
-                            marker="^"
                             text={title}
+                        />
+                        <MountainMarker
+                            lat={45.9835}
+                            lng={7.7847}
+                            text={gornergrat}
                         />
                         </GoogleMapReact>
                     </div>
