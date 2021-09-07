@@ -23,7 +23,10 @@ const productSchema = new mongoose.Schema({
         allowNull: false,
     },
     
-    size: {
+    sizes: {
+        type: String
+    },
+    prices: {
         type: String
     }
 });
