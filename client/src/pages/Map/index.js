@@ -8,9 +8,19 @@ import './style.css'
 
 // import GoogleSearch from '../../components/GoogleSearch';
 
+const openSearch = () => {
+  document.getElementById('eventAside').style.display = 'block'
+}
+
+const closeSearch = () => {
+  document.getElementById('eventAside').style.display = 'none'
+}
+
 const KoolBeansMarker = ({ text }) => 
   <div style={{
     color: 'white', 
+    fontSize: '15px',
+    fontWeight: 'bold',
     background: 'black',
     padding: '15px 15px',
     display: 'inline-flex',
@@ -23,16 +33,19 @@ const KoolBeansMarker = ({ text }) =>
     {text}
   </div>
 
-const MountainMarker = ({ text }) => 
+const EventMarker = ({ text }) => 
   <div style={{
     color: 'black', 
+    fontSize: '10px',
     background: 'white',
-    padding: '5px 5px',
+    padding: '10px 10px',
     display: 'inline-flex',
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: '100%',
+    border: 'solid',
+    borderColor: 'black',
     transform: 'translate(-50%, -50%)'
   }}>
     {text}
@@ -41,16 +54,18 @@ const MountainMarker = ({ text }) =>
 class Map extends Component {
   static defaultProps = {
     center: {
-      lat: 46.0207,
-      lng: 7.7491
+      lat: 46.01255,
+      lng: 7.74276
     },
-    zoom: 12
+    zoom: 15
   };
 
   render() {
 
     const title = 'Kool Beans'
-    const gornergrat = 'Gornergrat'
+    const schaferstube = 'Schäferstube'
+    const gornergrat = 'Gornergrat Railway'
+    const viewPoint = 'Matterhorn View Point'
 
     return (
       // Important! Always set the container height explicitly
@@ -68,25 +83,40 @@ class Map extends Component {
           
             <div className='display'>
                 <div id="map">
-                    <div style={{ height: '91.5vh', width: '100%' }}>
+                    <div style={{ height: '98vh', width: '100%' }}>
                         <GoogleMapReact
                         bootstrapURLKeys={{ key: "AIzaSyCUXkG-5a5cdEyPP2Ki6sg-0Ckc9qz06W8" }}
                         defaultCenter={this.props.center}
                         defaultZoom={this.props.zoom}
                         >
                         <KoolBeansMarker
-                            lat={46.0207}
-                            lng={7.7491}
+                            lat={46.01255}
+                            lng={7.74276}
                             text={title}
                         />
-                        <MountainMarker
-                            lat={45.9835}
-                            lng={7.7847}
+                        <EventMarker
+                            lat={46.01849}
+                            lng={7.74885}
+                            text={schaferstube}
+                        />
+                        <EventMarker
+                            lat={46.02364}
+                            lng={7.74778}
                             text={gornergrat}
+                        />
+                        <EventMarker
+                            lat={46.02576}
+                            lng={7.75627}
+                            text={viewPoint}
                         />
                         </GoogleMapReact>
                     </div>
                 </div>
+                <aside id='eventAside'>
+
+                  <button className='closeBtn' onClick={closeSearch}>Close</button>
+                </aside>
+                <button onClick={openSearch}>Open</button>
             </div>
         </>
     );
