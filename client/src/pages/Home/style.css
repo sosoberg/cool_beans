@@ -8,6 +8,14 @@
     }
   }
 
+@keyframes fontSizeHover {
+    0% {
+        font-size: 35px;
+    }
+    100% {
+        font-size: 45px;
+    }
+}
 .display {
     animation: display;
     animation-duration: .7s;
@@ -33,7 +41,12 @@
     border-radius: 10px;
     position: relative;
     text-decoration: none;
-    color: white
+    color: white;
+}
+
+.cropped:hover {
+    animation: fontSizeHover;
+    animation-duration: 2s;
 }
 
 .pictureTitle {
@@ -46,6 +59,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+
 }
 
 .pictureTitle2 {

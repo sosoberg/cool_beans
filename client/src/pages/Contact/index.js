@@ -28,9 +28,10 @@ function Contact() {
                 Feel free to reach out at any time with comments or concerns! If
                 you would like to make an order by phone, please contact us with
                 the provided number listed below. Otherwise, you can place
-                orders on line <Link to="/placeorder">here</Link>. If you are
+                orders online <Link to="/placeorder">here</Link>. If you are
                 looking for hours of operation, those will be listed below.
               </p>
+              
             </div>
             
           </div>
@@ -84,7 +85,7 @@ function Contact() {
                   
                 </tr>
                 <tr>
-                  <td>Wednessday</td>
+                  <td>Wednesday</td>
                   <td>06:00</td>
                   <td>17:00</td>
                 </tr>

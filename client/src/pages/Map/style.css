@@ -10,6 +10,15 @@
     }
   }
 
+@keyframes fadeIn {
+  0% {
+    transform: translateX(-400px);
+ }
+ 100% {
+    transform: translateX(0);
+ }
+}
+
 .display {
     animation: display;
     animation-duration: .7s;
@@ -30,4 +39,20 @@
     padding: solid 1px black;
     font-size: 25px;
     font-weight: bolder;
+  }
+
+  #eventAside {
+    animation: fadeIn;
+    animation-duration: 1s;
+    display: none;
+    position: fixed;
+    height: 88.25vh;
+    background-color: rgba(244, 244, 244,1);
+    z-index: 1;
+    width: 400px;
+  }
+
+  .closeBtn {
+    position: absolute;
+    right: 0px;
   }
