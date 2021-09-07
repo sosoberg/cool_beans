@@ -1,0 +1,13 @@
+.itemCard{
+width: 45%;
+min-height: 400px;
+background-size: cover;
+border-radius: 10px;
+color: white;
+
+}
+#menuContain{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

@@ -14,6 +14,10 @@ module.exports = {
             
 
         },
+        Menu: async function(parent, args, context){
+                let menu = await db.Product.find()
+                return menu
+        },
         
     },
     Mutation: {

@@ -1,4 +1,4 @@
-import { gql, useMutation } from '@apollo/client';
+import { gql } from '@apollo/client';
 
 
 const CURRENT_USER = gql`
@@ -8,5 +8,18 @@ query me{
     }
 }
 `
+const MENU = gql`
+query Menu{
+  Menu {
+    _id
+    title
+    ingredients
+    image
+    allergens
+    sizes
+    prices
+  }
+}
+`
 
-export {CURRENT_USER}
+export {CURRENT_USER, MENU}
