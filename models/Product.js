@@ -27,10 +27,10 @@ const productSchema = new mongoose.Schema({
     },
     
     sizes: {
-        type: String
+        type: [String]
     },
     prices: {
-        type: String
+        type: [String]
     }
 });
 

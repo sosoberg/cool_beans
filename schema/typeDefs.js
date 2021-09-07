@@ -13,8 +13,8 @@ type Product{
     image: String
     ingredients: String!
     allergens: String!
-    sizes: String
-    prices: String
+    sizes: [String]
+    prices: [String]
 }
 
 type Auth{

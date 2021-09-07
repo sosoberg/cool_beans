@@ -1,13 +1,31 @@
 .itemCard{
 width: 45%;
 min-height: 400px;
-background-size: cover;
+margin-top: 15px;
+
 border-radius: 10px;
 color: white;
+position: relative;
+
 
 }
 #menuContain{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+.productTextContainer{
+    position: absolute;
+    right: 10%;
+    top: 20%
+
+}
+.priceSizeTable{
+    width: 200px;
+    position: absolute;
+    right: 5%;
+    bottom: 20%
+}
+.th{
+    height: 20px;
 }
