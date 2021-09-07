@@ -29,9 +29,12 @@ const Header = () => {
   };
 
   useEffect(() => {
-      console.log("test")
      getUser()
   }, [])
+  const logOut = () => {
+    localStorage.removeItem("token")
+    window.location.href = "/"
+  }
 
 // if error, cut off private access
 if(error){
@@ -92,7 +95,7 @@ if(data){
               
             </>
           ) : (
-            <button className="signup link">Logout</button>
+            <button onClick={logOut} className="signUp link">Logout</button>
           )}
         </div>
         </Hidden>
