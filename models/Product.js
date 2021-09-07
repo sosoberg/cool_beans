@@ -7,6 +7,9 @@ const productSchema = new mongoose.Schema({
         primaryKey: true,
         autoIncrement: true,
     },
+    image:{
+        type: String
+    },
 
     title: {
         type: String,

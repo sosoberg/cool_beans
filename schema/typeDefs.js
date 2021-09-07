@@ -1,18 +1,20 @@
 const {gql} = require("apollo-server-express")
 module.exports = gql`
 type User{
-    id: ID!
+    _id: ID!
     username: String!
     email: String!
     password: String!
 }
 
 type Product{
-    id: ID!
+    _id: ID!
     title: String!
+    image: String
     ingredients: String!
     allergens: String!
-    size: String
+    sizes: String
+    prices: String
 }
 
 type Auth{
@@ -22,6 +24,7 @@ type Auth{
 
 type Query{
     me:User
+    Menu: [Product]
    
 
 }
