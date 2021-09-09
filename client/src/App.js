@@ -49,7 +49,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <div >
+    <div style={{position: "relative"}}>
       <ApolloProvider client={client}>
         <Provider store={store}>
       <Router>

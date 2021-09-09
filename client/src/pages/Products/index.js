@@ -26,10 +26,8 @@ function Products() {
           >
             <div className="productTextContainer">
               <h1>{item.title}</h1>
-              <p>{item.ingredients}</p>
-              <p>{item.allergens}</p>
-            </div>
-            <table className="priceSizeTable">
+              <hr></hr>
+              <table className="priceSizeTable">
                 <tbody>
                 <tr>
                   {item.sizes.map((size) => (
@@ -43,6 +41,17 @@ function Products() {
                 </tr>
                 </tbody>
               </table>
+              <hr></hr>
+              <h3>Contains</h3>
+              <br></br>
+              <p>{item.ingredients}</p>
+              <hr></hr>
+              <h3>Alergens</h3>
+              <br></br>
+              <p>{item.allergens}</p>
+            
+            
+              </div>
           </div>
         ))}
       </div>
