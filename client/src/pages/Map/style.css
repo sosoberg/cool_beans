@@ -19,6 +19,15 @@
  }
 }
 
+@keyframes fadeOut {
+  0% {
+    transform: translateX(0px);
+ }
+ 100% {
+    transform: translateX(-400px);
+ }
+}
+
 .display {
     animation: display;
     animation-duration: .7s;
@@ -41,18 +50,79 @@
     font-weight: bolder;
   }
 
-  #eventAside {
+  .eventAside {
     animation: fadeIn;
     animation-duration: 1s;
+
     display: none;
     position: fixed;
-    height: 88.25vh;
+    height: 85vh;
     background-color: rgba(244, 244, 244,1);
     z-index: 1;
     width: 400px;
   }
 
+  .eventHeader {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: underline;
+  }
+
+  .eventAside2 {
+    animation: fadeOut;
+    animation-duration: 1s;
+
+    display: none;
+    position: fixed;
+    height: 85vh;
+    background-color: rgba(244, 244, 244,1);
+    z-index: 1;
+    width: 400px;
+  }
+
+  .openBtn {
+    position:absolute;
+    bottom:50%;
+    color: black;
+    background-color: white;
+    padding: 11px;
+
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    width:2.3%;
+    height: 5%;
+    left:0%;
+    text-align:center;
+    text-decoration:none;
+    margin:0px auto;
+    font-size: 17px;
+  }
+
   .closeBtn {
-    position: absolute;
-    right: 0px;
+    position:absolute;
+    bottom:51%;
+    color: black;
+    background-color: white;
+    padding: 11px;
+
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    width:11%;
+    height: 6%;
+    right: -5%;
+    text-align:center;
+    text-decoration:none;
+    margin:0px auto;
+    font-size: 17px;
   }
