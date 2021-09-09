@@ -8,12 +8,27 @@ import './style.css'
 
 // import GoogleSearch from '../../components/GoogleSearch';
 
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+
 const openSearch = () => {
-  document.getElementById('eventAside').style.display = 'block'
+  document.getElementById('eventAside').style.display = 'block';
 }
 
 const closeSearch = () => {
-  document.getElementById('eventAside').style.display = 'none'
+  // document.getElementById('eventAside').style.display = 'none'
+  document.getElementById("eventAside").classList.remove('eventAside');
+  document.getElementById("eventAside").classList.add('eventAside2');
+  document.getElementById("eventAside").style.animationDuration = "1s";
+
+  setTimeout(function() {
+    document.getElementById("eventAside").style.display = 'none'
+   }, 800);
+
+   setTimeout(function() {
+    document.getElementById("eventAside").classList.remove('eventAside2');
+    document.getElementById("eventAside").classList.add('eventAside');
+   }, 800);
 }
 
 const KoolBeansMarker = ({ text }) => 
@@ -83,7 +98,7 @@ class Map extends Component {
           
             <div className='display'>
                 <div id="map">
-                    <div style={{ height: '98vh', width: '100%' }}>
+                    <div style={{ height: '85vh', width: '100%' }}>
                         <GoogleMapReact
                         bootstrapURLKeys={{ key: "AIzaSyCUXkG-5a5cdEyPP2Ki6sg-0Ckc9qz06W8" }}
                         defaultCenter={this.props.center}
@@ -112,11 +127,13 @@ class Map extends Component {
                         </GoogleMapReact>
                     </div>
                 </div>
-                <aside id='eventAside'>
-
-                  <button className='closeBtn' onClick={closeSearch}>Close</button>
+                <aside className="eventAside" id='eventAside'>
+                  <div>
+                    <h3 className='eventHeader'>Nearby Events</h3>
+                  </div>
+                  <button className='closeBtn' onClick={closeSearch}><ArrowBackIosIcon /></button>
                 </aside>
-                <button onClick={openSearch}>Open</button>
+                <button className='openBtn' onClick={openSearch}><ArrowForwardIosIcon /></button>
             </div>
         </>
     );
