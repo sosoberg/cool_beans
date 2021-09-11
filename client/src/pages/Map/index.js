@@ -12,27 +12,21 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 const openSearch = () => {
-  document.getElementById('eventAside').style.display = 'block';
+  document.getElementById("eventAside").classList.remove('eventAside');
+  document.getElementById("eventAside").classList.add('eventAside2');
+  document.getElementById("openBtn").style.display = 'none'
+
 }
 
 const closeSearch = () => {
-  // document.getElementById('eventAside').style.display = 'none'
-  document.getElementById("eventAside").classList.remove('eventAside');
-  document.getElementById("eventAside").classList.add('eventAside2');
-  document.getElementById("eventAside").style.animationDuration = "1s";
+  document.getElementById("eventAside").classList.remove('eventAside2');
+  document.getElementById("eventAside").classList.add('eventAside');
 
-  setTimeout(function() {
-    document.getElementById("eventAside").style.display = 'none'
-   }, 800);
-
-   setTimeout(function() {
-    document.getElementById("eventAside").classList.remove('eventAside2');
-    document.getElementById("eventAside").classList.add('eventAside');
-   }, 800);
+  document.getElementById("openBtn").style.display = 'block'
 }
 
 const KoolBeansMarker = ({ text }) => 
-  <div style={{
+  <button style={{
     color: 'white', 
     fontSize: '15px',
     fontWeight: 'bold',
@@ -46,7 +40,7 @@ const KoolBeansMarker = ({ text }) =>
     transform: 'translate(-50%, -50%)'
   }}>
     {text}
-  </div>
+  </button>
 
 const EventMarker = ({ text }) => 
   <div style={{
@@ -132,8 +126,9 @@ class Map extends Component {
                     <h3 className='eventHeader'>Nearby Events</h3>
                   </div>
                   <button className='closeBtn' onClick={closeSearch}><ArrowBackIosIcon /></button>
+                  <button className='openBtn' id='openBtn' onClick={openSearch}><ArrowForwardIosIcon /></button>
                 </aside>
-                <button className='openBtn' onClick={openSearch}><ArrowForwardIosIcon /></button>
+                
             </div>
         </>
     );

@@ -12,19 +12,19 @@
 
 @keyframes fadeIn {
   0% {
-    transform: translateX(-400px);
+    transform: translateX(-375px);
  }
  100% {
-    transform: translateX(0);
+    transform: translateX(0px);
  }
 }
 
 @keyframes fadeOut {
   0% {
-    transform: translateX(0px);
+    transform: translateX(375px);
  }
  100% {
-    transform: translateX(-400px);
+    transform: translateX(0px);
  }
 }
 
@@ -51,12 +51,24 @@
   }
 
   .eventAside {
+    animation: fadeOut;
+    animation-duration: 1s;
+
+    position: fixed;
+    height: 100vh;
+    background-color: rgba(244, 244, 244,1);
+    z-index: 1;
+    width: 400px;
+    left: -375px;
+  }
+
+  
+  .eventAside2 {
     animation: fadeIn;
     animation-duration: 1s;
 
-    display: none;
     position: fixed;
-    height: 85vh;
+    height: 100vh;
     background-color: rgba(244, 244, 244,1);
     z-index: 1;
     width: 400px;
@@ -69,21 +81,11 @@
     text-decoration: underline;
   }
 
-  .eventAside2 {
-    animation: fadeOut;
-    animation-duration: 1s;
-
-    display: none;
-    position: fixed;
-    height: 85vh;
-    background-color: rgba(244, 244, 244,1);
-    z-index: 1;
-    width: 400px;
-  }
 
   .openBtn {
     position:absolute;
-    bottom:50%;
+    right: -5%;
+    bottom: 55%;
     color: black;
     background-color: white;
     padding: 11px;
@@ -95,9 +97,8 @@
 
     outline: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    width:2.3%;
-    height: 5%;
-    left:0%;
+    width: 45px;
+    height: 48px;
     text-align:center;
     text-decoration:none;
     margin:0px auto;
@@ -106,7 +107,7 @@
 
   .closeBtn {
     position:absolute;
-    bottom:51%;
+    bottom:55%;
     color: black;
     background-color: white;
     padding: 11px;
@@ -118,8 +119,8 @@
 
     outline: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    width:11%;
-    height: 6%;
+    width: 45px;
+    height: 48px;
     right: -5%;
     text-align:center;
     text-decoration:none;
