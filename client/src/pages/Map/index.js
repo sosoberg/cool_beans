@@ -26,7 +26,7 @@ const closeSearch = () => {
 }
 
 const KoolBeansMarker = ({ text }) => 
-  <div style={{
+  <button style={{
     color: 'white', 
     fontSize: '15px',
     fontWeight: 'bold',
@@ -40,7 +40,7 @@ const KoolBeansMarker = ({ text }) =>
     transform: 'translate(-50%, -50%)'
   }}>
     {text}
-  </div>
+  </button>
 
 const EventMarker = ({ text }) => 
   <div style={{

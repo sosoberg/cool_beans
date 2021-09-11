@@ -39,7 +39,7 @@
     width: 100%;
     /* The width is the width of the web page */
     position: fixed;
-    top: 200px;
+    top: 80px;
   }
 
   .markerDiv {
@@ -85,7 +85,7 @@
   .openBtn {
     position:absolute;
     right: -5%;
-    bottom: 51%;
+    bottom: 55%;
     color: black;
     background-color: white;
     padding: 11px;
@@ -107,7 +107,7 @@
 
   .closeBtn {
     position:absolute;
-    bottom:51%;
+    bottom:55%;
     color: black;
     background-color: white;
     padding: 11px;
