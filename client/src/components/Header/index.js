@@ -70,7 +70,7 @@ if(data){
           </Link>
           {/* If loggedIn then desplay */}
           {loggedIn ? (
-            <Link className="link" to="/placeorder">
+            <Link className="link" to="/order">
               Order-Online
             </Link>
           ) : (

@@ -25,6 +25,7 @@ type Auth{
 type Query{
     me:User
     Menu: [Product]
+    ProtectedMenu: [Product]
    
 
 }

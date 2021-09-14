@@ -21,5 +21,18 @@ query Menu{
   }
 }
 `
+const PROTECTED_MENU = gql`
+query ProtectedMenu{
+  ProtectedMenu {
+    _id
+    title
+    ingredients
+    image
+    allergens
+    sizes
+    prices
+  }
+}
+`
 
-export {CURRENT_USER, MENU}
+export {CURRENT_USER, MENU, PROTECTED_MENU}

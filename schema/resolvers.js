@@ -18,6 +18,16 @@ module.exports = {
                 let menu = await db.Product.find()
                 return menu
         },
+        ProtectedMenu: async function(parent, args, context){
+            if(context.user){
+                let menu = await db.Product.find()
+                return menu
+
+            }else{
+                throw new ApolloError("Login to order online")
+            }
+                
+        },
         
     },
     Mutation: {

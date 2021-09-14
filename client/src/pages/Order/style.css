@@ -1,0 +1,10 @@
+#orderContain{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.orderHeaderText{
+    font-size: larger;
+    text-align: center;
+    margin-top: 10px;
+}
