@@ -3,8 +3,8 @@ import GoogleMapReact from 'google-map-react';
 
 import './style.css'
 
-// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-// import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 
 // import GoogleSearch from '../../components/GoogleSearch';
 
@@ -79,7 +79,7 @@ class Map extends Component {
     return (
       // Important! Always set the container height explicitly
         <>
-            {/* <div className='loader'>
+            <div className='loader'>
                 <Loader
                     type="Oval"
                     color="black"
@@ -88,7 +88,7 @@ class Map extends Component {
                     width={600}
                     timeout={700} //3 secs
                     />
-            </div> */}
+            </div>
           
             <div className='display'>
                 <div id="map">
