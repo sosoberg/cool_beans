@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 // import Loader from "react-loader-spinner";
 
+
+
 function Contact() {
   return (
     <>
@@ -38,23 +40,23 @@ function Contact() {
           <div id="infoWraper">
           <div id="infoContain">
             <div className="infoBlocks" id="contactInfo">
-              <h1 style={{ fontSize: "20px" }}>Contact</h1>
+              <h1>Contact</h1>
               <address>
-                <div>
+                <div className='contactLink'>
                   Phone:{" "}
                   <a id="phoneNumber" href="tel:5093934043">
                     +41 011 41 41 410 04 10
                   </a>
                 </div>
-                <div>
+                <div className='contactLink'>
                   Email:{" "}
                   <a id="phoneNumber" href="mailto:coolbeans@gmail.com">
                     koolbeans@gmail.com
                   </a>
                 </div>
-                <div>
+                <div className='contactLink'>
                   Location:{" "}
-                  <p>Schluhmattstrasse 130, Zermatt, 3920 Switzerland</p>
+                  <a href="https://maps.google.com/?ll=46.01255,7.74276">Zermatt, Switzerland</a>
                 </div>
               </address>
             </div>
@@ -64,8 +66,8 @@ function Contact() {
              
                 <tr>
                   <th><h2>Day</h2></th>
-                  <th><h2>Open</h2></th>
-                  <th><h2>Close</h2></th>
+                  <th><h2>Open (CEST)</h2></th>
+                  <th><h2>Close (CEST)</h2></th>
                 </tr>
                 <tr>
                   <td>Sunday</td>
