@@ -69,6 +69,7 @@ export default function Login() {
         <div className="flexCenter">
           <input
           className="loginInput"
+          type="password"
             onChange={handleChange}
             placeholder="password"
             name="password"

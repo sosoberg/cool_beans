@@ -51,7 +51,7 @@ const [createUser, {data, loading, error}] = useMutation(CREATE_USER)
           <input className="signUpForm" onChange={handleChange} placeholder="email" name="email" value={join.email}></input>
         </div>
         <div>
-          <input className="signUpForm" onChange={handleChange} placeholder="password" name="password" value={join.password}></input>
+          <input className="signUpForm" onChange={handleChange} placeholder="password" name="password" value={join.password} type="password"></input>
         </div>
         <button className='joinSubmit'>Submit</button>
       </form>
