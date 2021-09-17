@@ -51,17 +51,25 @@ export default function Product(props) {
           <p>{props.item.allergens}</p>
         </div>
         {window.location.pathname === "/order" ? (
-          <button onClick={handleFlip}>Order</button>
+          <button className="orderButton" onClick={handleFlip}>Order</button>
         ) : (
           <></>
         )}
       </div>
-      <div>
-        <form>
-          This is an order form
+      
+        <form className="orderCard">
+          <h2>{props.item.title}</h2>
+          <select>
+          {props.item.sizes.map((size, index) => (
+            <option key={index}value={size}>{size}</option>
+                  
+                ))}
+          </select>
+      
+          <button onClick={handleFlipBack}>Add To Cart</button>
         </form>
-        <button onClick={handleFlipBack}>back</button>
-      </div>
+        
+      
     </ReactCardFlip>
   );
 }
