@@ -1,6 +1,6 @@
 .itemCard{
-    width: 45%;
-    min-height: 400px;
+    /* /* width: 45%; */
+    min-height: 400px; 
     margin-top: 15px;
     
     border-radius: 10px;
@@ -36,4 +36,26 @@
 
 .th{
     height: 20px;
+}
+.orderButton{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    background: transparent;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.orderCard{
+    min-height: 400px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 20px;
+    background-color: aliceblue;
+    text-align: center;
 }
