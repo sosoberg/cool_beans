@@ -4,12 +4,19 @@ import "./style.css";
 import ReactCardFlip from "react-card-flip";
 export default function Product(props) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [price, setPrice] = useState(null)
   const handleFlip = () => {
     setIsFlipped(true);
   };
   const handleFlipBack = () => {
     setIsFlipped(false);
   };
+  const handlePrice = (event) => {
+    let index = props.item.sizes.indexOf(event.target.value)
+    
+    setPrice(props.item.prices[index])
+  }
+
   return (
     <ReactCardFlip
       containerStyle={{ width: "45%" }}
@@ -59,13 +66,14 @@ export default function Product(props) {
       
         <form className="orderCard">
           <h2>{props.item.title}</h2>
-          <select>
+          <select onChange={handlePrice}>
           {props.item.sizes.map((size, index) => (
             <option key={index}value={size}>{size}</option>
                   
                 ))}
+                
           </select>
-      
+          <p>{price}</p>
           <button onClick={handleFlipBack}>Add To Cart</button>
         </form>
         
