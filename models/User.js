@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-
+const cartSchema = require("./cartSchema")
 const userSchema = new mongoose.Schema({
     id: {
         type: Number, 
@@ -24,6 +24,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         allowNull: false,
     },
+    cart:{
+        type: [cartSchema]
+    }
 });
 
 userSchema.methods = {

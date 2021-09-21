@@ -58,4 +58,35 @@
     font-size: 20px;
     background-color: aliceblue;
     text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
 }
+.orderCard h2{
+ font-size: 25px;
+ padding-top: 10px;
+}
+.drinkFlex{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.addedIngContain{
+    max-height: 50%;
+    overflow: scroll;
+}
+.allReadyAdded{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+}
+.addToCartButton{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

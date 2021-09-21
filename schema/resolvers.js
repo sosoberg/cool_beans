@@ -61,6 +61,21 @@ module.exports = {
             }
 
         },
+        addToCart: async function(parent, args, context){
+            if(context.user){
+                
+                let user = await db.User.findByIdAndUpdate(context.user.userId, {
+                   $push: {cart: args.item}
+                })
+
+                let {cart} = await db.User.findById(context.user.userId).select("cart")
+                console.log(cart)
+            
+                return await cart
+            }else{
+                throw new ApolloError('You are not authorized sir')
+            }
+        }
 
     }
 }

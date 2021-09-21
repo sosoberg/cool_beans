@@ -23,4 +23,17 @@ mutation login($email: String!, $password: String!){
 }
 
 `
-export {CREATE_USER, LOGIN}
+const ADD_TO_CART = gql`
+mutation addToCart($item: CartItem!){
+  addToCart(item: $item) {
+    title
+    size
+    price
+    dairy
+    extra
+    
+  }
+}
+
+`
+export {CREATE_USER, LOGIN, ADD_TO_CART}

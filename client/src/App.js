@@ -18,6 +18,7 @@ import Join from "./pages/Join"
 import Login from "./pages/Login"
 import Order from "./pages/Order"
 import Map from "./pages/Map"
+import Cart from "./pages/Cart"
 
 // redux configure
 import configureStore from "./redux/configureStore"
@@ -65,6 +66,7 @@ function App() {
                     <Route exact path='/login' component={ Login } />
                     <Route exact path='/map' component={ Map } />
                     <Route exact path='/order' component={ Order} />
+                    <Route exact path="/cart" component={Cart}/>
                 </Switch>
                 <Footer />
         </Router>

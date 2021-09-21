@@ -34,5 +34,12 @@ query ProtectedMenu{
   }
 }
 `
+const GET_CACHED_CART = gql`
+query getChachedCart{
+  cart{
+   list
+  }
+}
+`
 
-export {CURRENT_USER, MENU, PROTECTED_MENU}
+export {CURRENT_USER, MENU, PROTECTED_MENU, GET_CACHED_CART}

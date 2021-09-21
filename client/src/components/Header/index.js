@@ -9,6 +9,8 @@ import { useSelector, useDispatch } from "react-redux";
 import {CURRENT_USER} from "../../graphQL/api/querys"
 import {useLazyQuery} from "@apollo/client"
 import { Hidden } from '@material-ui/core';
+import { useApolloClient } from "@apollo/client";
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 
 const Header = () => {
@@ -42,6 +44,7 @@ if(error){
 }
 // if data, keep private access on refresh
 if(data){
+  console.log(data)
     dispatch(setLoginState({
     userName: data.me.username,
       loggedIn: true
@@ -70,9 +73,15 @@ if(data){
           </Link>
           {/* If loggedIn then desplay */}
           {loggedIn ? (
+            <>
+            
             <Link className="link" to="/order">
               Order-Online
             </Link>
+            <Link to="/cart">
+            <ShoppingCartIcon/>
+            </Link>
+            </>
           ) : (
             <></>
           )}

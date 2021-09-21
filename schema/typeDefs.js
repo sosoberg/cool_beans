@@ -4,7 +4,8 @@ type User{
     _id: ID!
     username: String!
     email: String!
-    password: String!
+   
+    cart: [CartItems]
 }
 
 type Product{
@@ -16,6 +17,25 @@ type Product{
     sizes: [String]
     prices: [String]
 }
+input CartItem{
+    title: String!
+    size: String!
+    price: String!
+    extra: [String]
+    dairy: String
+
+}
+type CartItems{
+    title: String
+    _id: ID
+    size: String
+    price: String
+    extra: [String]
+    dairy: String
+
+}
+
+
 
 type Auth{
     user: User
@@ -32,6 +52,7 @@ type Query{
 type Mutation{
     login(email: String!, password: String!):Auth
     createUser(username: String!, email: String!, password: String!):Auth
+    addToCart(item: CartItem): [CartItems]
 }
 
 

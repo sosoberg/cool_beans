@@ -1,0 +1,47 @@
+#cartContain{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+#itemContainer{
+    grid-column: 1/8;
+    
+}
+#checkoutBox{
+    margin-top: 30px;
+    border-radius: 10px;
+    grid-column: 9/13;
+    height: 100px;
+    
+
+}
+#checkoutBox div{
+    width: 80%;
+    background-color: aqua;
+    
+    border-radius: 10px;
+    height: 400px;
+    
+    
+
+}
+.itemCardContain{
+    display: flex;
+    justify-content: center;
+}
+.checkoutCard{
+    margin-top: 30px;
+    border-radius: 10px;
+    min-height: 400px;
+    width: 80%;
+    background-color: aqua;
+    padding: 10px;
+}
+.checkoutCard div{
+    width: 100%;
+    border-radius: 10px;
+    min-height: 100px;
+    background-color: gray;
+    margin-top: 10px;
+    display: flex;
+    
+}
