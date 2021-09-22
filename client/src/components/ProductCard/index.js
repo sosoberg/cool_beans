@@ -1,13 +1,18 @@
 import React, { useState, useRef } from "react";
 import "./style.css";
 import { ADD_TO_CART } from "../../graphQL/api/mutations";
-import { GET_CACHED_CART } from "../../graphQL/api/querys";
+import { GET_CACHED_CART, CURRENT_USER } from "../../graphQL/api/querys";
 import ReactCardFlip from "react-card-flip";
 import { useMutation } from "@apollo/client";
 import { useApolloClient } from "@apollo/client";
 export default function Product(props) {
   const client = useApolloClient();
-  const [AddToCart, { data, loading, error }] = useMutation(ADD_TO_CART);
+  const [AddToCart, { data, loading, error }] = useMutation(ADD_TO_CART, {
+    refetchQueries:[
+      CURRENT_USER,
+      "me"
+    ]
+  });
 
   const [isFlipped, setIsFlipped] = useState(false);
   const [size, setSize] = useState(props.item.sizes[0]);
@@ -91,17 +96,9 @@ export default function Product(props) {
       },
     });
   };
+  // Do other stuff maybe
   if (data) {
-    client.writeQuery({
-      query: GET_CACHED_CART,
-      data: {
-        // Contains the data to write
-        cart: {
-          __typename: "Cart",
-          list: [data.addToCart],
-        },
-      },
-    });
+    
   }
 
   return (

@@ -7,6 +7,7 @@ module.exports = {
             console.log(context.user)
             if(context.user){
                 let user = await db.User.findById(context.user.userId).select("-password")
+                
                 return user
             }else{
                 throw new ApolloError('You are not authorized sir')
@@ -62,19 +63,40 @@ module.exports = {
 
         },
         addToCart: async function(parent, args, context){
-            if(context.user){
-                
-                let user = await db.User.findByIdAndUpdate(context.user.userId, {
-                   $push: {cart: args.item}
-                })
-
-                let {cart} = await db.User.findById(context.user.userId).select("cart")
-                console.log(cart)
             
-                return await cart
+            if(context.user){
+                try{
+                    let user = await db.User.findByIdAndUpdate(context.user.userId, {
+                        $push: {cart: args.item}
+                     })
+                     return user
+     
+                }catch(err){
+                    throw new ApolloError("unable to add to cart at this time")
+                }
+                
+                
+                
             }else{
                 throw new ApolloError('You are not authorized sir')
             }
+        },
+        removeFromCart: async function(parent, args, context){
+            console.log(args._id)
+            try{
+                if(!context.user){
+                    throw new Error("Session expired! Please login")
+                }
+                let user = await db.User.findByIdAndUpdate(context.user.userId, {
+                    $pull: {cart: {_id: args._id}}
+                 })
+                 
+                 return user
+
+            }catch(err){
+                throw new ApolloError(err.message)
+            }
+            
         }
 
     }

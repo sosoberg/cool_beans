@@ -6,10 +6,10 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Drawers from "../Drawer";
 import { useSelector, useDispatch } from "react-redux";
-import {CURRENT_USER} from "../../graphQL/api/querys"
+import {CURRENT_USER, GET_CACHED_CART} from "../../graphQL/api/querys"
 import {useLazyQuery} from "@apollo/client"
 import { Hidden } from '@material-ui/core';
-import { useApolloClient } from "@apollo/client";
+
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 

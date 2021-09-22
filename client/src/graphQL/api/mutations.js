@@ -26,14 +26,23 @@ mutation login($email: String!, $password: String!){
 const ADD_TO_CART = gql`
 mutation addToCart($item: CartItem!){
   addToCart(item: $item) {
-    title
-    size
-    price
-    dairy
-    extra
-    
+    cart{
+      title
+      size
+      price
+      dairy
+      extra
+    }
   }
 }
 
 `
-export {CREATE_USER, LOGIN, ADD_TO_CART}
+const REMOVE_FROM_CART = gql`
+mutation removeFromCart($_id: ID!){
+  removeFromCart(_id: $_id) {
+    username
+  }
+}
+
+`
+export {CREATE_USER, LOGIN, ADD_TO_CART, REMOVE_FROM_CART}

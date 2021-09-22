@@ -52,7 +52,8 @@ type Query{
 type Mutation{
     login(email: String!, password: String!):Auth
     createUser(username: String!, email: String!, password: String!):Auth
-    addToCart(item: CartItem): [CartItems]
+    addToCart(item: CartItem): User
+    removeFromCart(_id: ID!): User
 }
 
 

@@ -36,12 +36,30 @@
     background-color: aqua;
     padding: 10px;
 }
-.checkoutCard div{
+.individualItem{
     width: 100%;
     border-radius: 10px;
-    min-height: 100px;
+    
     background-color: gray;
     margin-top: 10px;
-    display: flex;
-    
+    position: relative
+   
+}
+.centerText{
+    text-align: center;
+}
+.centerText h6{
+    font-weight: bolder;
+}
+.removeButton{
+    position: absolute;
+    top: 50%;
+    right:10px;
+    transform: translate(0%, -35%);
+}
+@media only screen and (max-width:760px){
+    .centerText{
+        width: 50%;
+        padding-bottom: 10px
+    }
 }
