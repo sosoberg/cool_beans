@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, ComponentDidMount } from 'react';
 import GoogleMapReact from 'google-map-react';
-
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 import './style.css'
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -60,7 +60,30 @@ const EventMarker = ({ text }) =>
     {text}
   </div>
 
+
+
+
+
 class Map extends Component {
+
+  state = {
+    lat: "",
+    lon: ""
+  }
+  
+  componentDidMount(){
+    if (!navigator.geolocation){
+      console.log("Geolocation is not supported by your browser");
+       return;
+     }else{
+      window.navigator.geolocation.getCurrentPosition((position) => {
+        let mylat = position.coords.latitude
+        let mylon = position.coords.longitude
+        this.setState({lat: mylat, lon: mylon})
+        console.log(position.coords.latitude, position.coords.longitude);
+      });
+     }
+  }
   static defaultProps = {
     center: {
       lat: 46.01255,
@@ -103,6 +126,10 @@ class Map extends Component {
                             lng={7.74276}
                             text={title}
                         />
+                       <LocationOnIcon
+                       lat={this.state.lat}
+                       lng={this.state.lon}
+                       />
                         <EventMarker
                             lat={46.01849}
                             lng={7.74885}

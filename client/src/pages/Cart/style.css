@@ -10,14 +10,17 @@
 .itemCardContain{
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 .checkoutCard{
     margin-top: 30px;
     border-radius: 10px;
-    min-height: 400px;
+    /* min-height: 400px; */
     width: 80%;
     background-color: aqua;
-    padding: 10px;
+    padding: 20px;
+    
+    
 }
 .individualItem{
     width: 100%;
@@ -67,6 +70,13 @@
     
     
 }
+.checkoutCard h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+
+}
 #checkoutBox h5{
     text-align: center;
     font-weight: bold;
@@ -99,4 +109,19 @@ margin: 0px 20px 10px 20px;
 }
 .smallInput p{
     margin: 0px 20px
+}
+
+@media only screen and (max-width:1300px){
+    #cartContain{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #itemContainer{
+        width: 100%;
+    }
+    #checkoutBox{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }

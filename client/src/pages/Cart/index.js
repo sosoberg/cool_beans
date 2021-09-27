@@ -22,10 +22,7 @@ export default function Cart() {
       refetchQueries: [CURRENT_USER, "me"]
   })
 
-  if (data) {
-    console.log(data);
-  }
-  
+
 const removeFromCart = (event) => {
     removeItem({
         variables: {_id: event.target.value}
@@ -39,9 +36,7 @@ setForm({
   ...form, [name]:value
 })
 }
-const handleSelect = (event) => {
 
-}
   return (
     <div id="cartContain">
       <div id="itemContainer">
@@ -82,7 +77,7 @@ const handleSelect = (event) => {
                 </div>
               ))
             ) : (
-              <></>
+              <>Not Logged In</>
             )}
           </div>
         </div>
