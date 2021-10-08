@@ -56,7 +56,7 @@ export default function Login() {
     <div style={{width: "100vw", height: "88vh", position: "relative"}}>
     <div id="loginFormContain">
       <form onSubmit={handleSubmit} id="joinForm">
-        <h2 style={{textAlign: "center"}}>Bro!</h2>
+        <h2 style={{textAlign: "center"}}>Welcome!</h2>
         <div className="flexCenter">
           <input
           className="loginInput"
